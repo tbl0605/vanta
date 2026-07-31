@@ -752,7 +752,7 @@ class Birds extends VantaBase {
         const gradient = options.colorMode.indexOf('Gradient') != -1
 
         const newBirdGeo = getNewBirdGeometryBasic(options)
-        const numV = newBirdGeo.attributes.position.length
+        const numV = newBirdGeo.attributes.position.count
         const birdColors = new THREE.BufferAttribute(new Float32Array(numV * 3), 3)
         if (gradient) {
           for (var j=0; j<newBirdGeo.index.array.length; j+=3) {
